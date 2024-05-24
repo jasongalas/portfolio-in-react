@@ -1,7 +1,10 @@
+import avatar from '../assets/Me.png'
+
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>About Paws</h1>
+      <img className="avatar" src={avatar} alt="Me"></img>
       <p>
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
         Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
