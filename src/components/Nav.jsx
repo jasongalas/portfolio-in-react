@@ -2,7 +2,7 @@ export default function Nav() {
 
   return (
     <nav className="main-header-menu">
-      <section>
+      <header>
         <div>
           <a href="About Me">About Me</a>
         </div>
@@ -15,7 +15,7 @@ export default function Nav() {
         <div>
           <a href="Resume">Resume</a>
         </div>
-      </section>
+      </header>
     </nav>
   );
 }
