@@ -1,4 +1,4 @@
-import avatar from '../assets/Me.png'
+// import avatar from '../assets/Me'
 
 export default function About() {
   return (

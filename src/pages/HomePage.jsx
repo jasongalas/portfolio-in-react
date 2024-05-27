@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import About from '../components/About';
-import Nav from '../components/Nav';
+import Nav from '../components/Header';
 
 export default function HomePage() {
 
     return(
         <div>
+            <main>
             
+            </main>
         </div>
     );
 }

@@ -1,21 +1,20 @@
-export default function Nav() {
+import { useEffect } from "react";
 
-  return (
-    <nav className="main-header-menu">
-      <header>
-        <div>
-          <a href="About Me">About Me</a>
-        </div>
-        <div>
-          <a href="Portfolio">Portfolio</a>
-        </div>
-        <div>
-          <a href="Contact">Contact</a>
-        </div>
-        <div>
-          <a href="Resume">Resume</a>
-        </div>
-      </header>
+export default function Nav(props){
+    const {
+        pages = [],
+        setCurrentPage,
+        currentPage
+    } = props;
+
+useEffect(() => {
+    document.title = currentPage.name
+}, [currentPage])
+
+    return <nav>
+        {pages.map((page) =>{
+            return <li classname={currentPage.name===page.name && "active"} key={page.name}>
+                <span onClick={() => setCurrentPage(page)}>{page.name}</span></li>
+        })}
     </nav>
-  );
 }
