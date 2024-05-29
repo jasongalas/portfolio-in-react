@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 
-export default function contacForm() {
+export default function Contact() {
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

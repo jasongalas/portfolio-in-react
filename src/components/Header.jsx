@@ -1,10 +1,11 @@
-export default function Header() {
+import React from 'react'
+
+export default function Header( {children} ) {
 
   return (
-    <nav className="main-header-menu">
-      <header>
+      <header className="header">
         <h1>Paw's Portfolio</h1>
+        {children}
       </header>
-    </nav>
   );
 }

@@ -1,9 +1,9 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+    color: black;
 }
 
 body {
@@ -12,16 +12,20 @@ body {
 
 h1 {
   margin: 32px 0;
-  color: black;
+  color: grey;
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header{
+header {
   height: "50px";
   display: grid;
   padding: 10px;
   align-items: center;
   justify-content: center;
+  color: black;
 }
 
 footer {

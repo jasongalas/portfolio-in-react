@@ -2,19 +2,20 @@ import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Page from './pages/HomePage';
 
-function App() {
+export default function App() {
 
   const [pages] = useState ([
     {
       name: "about",
     },
     {
-      name: "porfolio",
+      name: "contact",
     },
     {
-      name: "contact",
+      name: "portfolio",
     },
     {
       name: "resume",
@@ -25,14 +26,13 @@ const [currentPage, setCurrentPage] = useState(pages[0])
 
   return (
     <div>
-      <Header/>
-        <Nav pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage}></Nav>
-        <main>
-
-        </main>
+      <Header>
+        <Nav pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      </Header>
+          <main>
+            <Page currentPage={currentPage}></Page>
+          </main>
       <Footer/>
     </div>
-  );
+    );
 }
-
-export default App;

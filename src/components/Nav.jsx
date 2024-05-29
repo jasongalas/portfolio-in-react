@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import './nav.css';
 
 export default function Nav(props){
     const {
@@ -11,10 +12,15 @@ useEffect(() => {
     document.title = currentPage.name
 }, [currentPage])
 
-    return <nav>
-        {pages.map((page) =>{
-            return <li classname={currentPage.name===page.name && "active"} key={page.name}>
-                <span onClick={() => setCurrentPage(page)}>{page.name}</span></li>
-        })}
-    </nav>
+    return (<nav className="nav-bar">
+            <ul className="nav-list">
+                {pages.map((page) => (
+                    <li className={`nav-item ${currentPage.name === page.name ? 'active' : ''}`} 
+                        key={page.name}>
+                        <span className="nav-link" onClick={() => setCurrentPage(page)}>{page.name}</span>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    );
 }

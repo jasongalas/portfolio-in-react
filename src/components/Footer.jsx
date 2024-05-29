@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Footer() {
 
   const URLS = [
@@ -13,7 +15,7 @@ export default function Footer() {
 
     return( 
         <footer className="main-footer-menu">
-          <section classname="links">
+          <section className="links">
           <span style={{paddingRight: "20px"}}>© Paws Productions</span>
             {URLS.map(links =>{
               return <a href={links.link} key={links.name}>{links.name}</a>

@@ -1,0 +1,10 @@
+.active {
+    text-decoration-color: teal;
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    cursor: pointer;
+   }
