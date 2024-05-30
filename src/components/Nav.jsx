@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import './nav.css';
 
 export default function Nav(props){
     const {

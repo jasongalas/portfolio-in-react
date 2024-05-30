@@ -1,11 +1,12 @@
 import React from 'react'
+import Me from '../assets/images/Me.jpeg';
 
 export default function About() {
   return (
     <div>
-      <h1>About Paws</h1>
-      <img src="/assets/Me.jpeg" alt="Me" className="GPOY" />
-      <p>
+      <h2>About The Coder</h2>
+      <img src={Me} alt="Me" className="aboutme-container" />
+      <p className='blurb-container'>
         The spring of 2024 was a time spent trying to hone the act of coding. 
         In 3 short months, our cohort was crammed with so many topics and ideas,
         it was hard to keep it all in track. But with time and determination,

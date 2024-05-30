@@ -9,16 +9,16 @@ export default function App() {
 
   const [pages] = useState ([
     {
-      name: "about",
+      name: "About Me",
     },
     {
-      name: "contact",
+      name: "Contact Me",
     },
     {
-      name: "portfolio",
+      name: "My Portfolio",
     },
     {
-      name: "resume",
+      name: "Resume",
     },
   ])
 

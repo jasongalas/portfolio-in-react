@@ -3,8 +3,7 @@ import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -15,10 +14,8 @@ const handleInputChange = (input) => {
   const inputType = target.name;
   const inputValue = target.value;
 
-  if (inputType === 'firstName') {
-    setFirstName(inputValue);
-  } else if (inputType === 'lastName') {
-    setLastName(inputValue);
+  if (inputType === 'name') {
+    setName(inputValue);
   } else if (inputType === 'email') {
     setEmail(inputValue);
   } else {
@@ -31,60 +28,51 @@ const handleFormSubmit = (event) => {
 
 if (!validateEmail(email)) {
   setErrorMessage('Email is invalid');
-} else if (!firstName || !lastName) {
+} else if (!name) {
   setErrorMessage('Please enter a name!');
   return;
 }
 
-  setFirstName('');
-  setLastName('');
+  setName('');
   setEmail('');
   setMessage('');
 }
 
   return (
-    <div className="form-container">
-      <h1>Contact Page</h1>
-      <p>
-        <form className="form" onSubmit={handleFormSubmit}>
-        <input
-          value={firstName}
-          name="firstName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          value={lastName}
-          name="lastName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Last Name"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="johndoe@doejohn.com"
-        />
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="leave a message"
-        />
-        <button type="submit">
-          Submit
-        </button>
+    <div>
+      <h2>Contact Page</h2>
+        <p>Drop me a line, I'd love to hear from you!</p>
+        <form className="form-container" onSubmit={handleFormSubmit}>
+          <input
+            value={name}
+            name="name"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            value={email}
+            name="email"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="johndoe@doejohn.com"
+          />
+          <input
+            value={message}
+            name="message"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="leave a message"
+          />
+          <button type="submit">
+            Submit
+          </button>
       </form>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-      </p>
     </div>
   );
 }
