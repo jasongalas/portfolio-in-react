@@ -13,6 +13,7 @@
 
 body {
   background-color: #FF8552;
+  display: flex;
 }
 
 h1 {
@@ -54,6 +55,17 @@ header {
   background-color: #85FFC7;
   border-radius: 3px;
 }
+
+.aboutme-container{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .aboutme-image{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+ }
 
 .form-container{
   text-align: center;
@@ -116,12 +128,6 @@ p{
   cursor: pointer;
   font-weight: bold;
 }
-
- .aboutme-container{
-  position: relative;
-  display: flex;
-  align-self: center;
- }
 
  .resume-section {
   display: flex;
