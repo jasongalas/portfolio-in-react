@@ -6,7 +6,7 @@ Much like we had to revisit a blog site with new tools, we were tasked once agai
 
 ## Installation
 
-There is no installation required here, all that is needed is the live link: https://thriving-sunshine-df557f.netlify.app/
+There is no installation required here, all that is needed is the live link: https://paws-portfolio.netlify.app/
 
 ## Usage
 

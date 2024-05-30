@@ -67,6 +67,11 @@ header {
   align-items: center;
  }
 
+ .aboutme-image img{
+  max-width: 100%;
+  height: auto;
+ }
+
 .form-container{
   text-align: center;
   display: flex;
