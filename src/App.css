@@ -63,13 +63,11 @@ header {
 
  .aboutme-image{
   display: grid;
-  justify-content: center;
-  align-items: center;
- }
-
- .aboutme-image img{
   max-width: 100%;
   height: auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
  }
 
 .form-container{
